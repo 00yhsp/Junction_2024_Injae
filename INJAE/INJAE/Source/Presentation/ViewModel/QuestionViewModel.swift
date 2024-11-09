@@ -17,11 +17,11 @@ final class QuestionViewModel {
     var progressValue: CGFloat {
         switch currentState {
         case .superpower:
-            return 3
+            return 1
         case .character:
             return 2
         case .mountain:
-            return 1
+            return 3
         }
     }
 
