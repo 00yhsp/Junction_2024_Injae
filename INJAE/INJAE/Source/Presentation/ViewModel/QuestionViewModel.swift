@@ -25,6 +25,19 @@ final class QuestionViewModel {
         }
     }
 
+    var isCompleted: Bool = false
+
+    var isContinueButtonDisabled: Bool {
+        switch currentState {
+        case .superpower:
+            currentSuperpowerCase == nil
+        case .character:
+            currentCharacterCase == nil
+        case .mountain:
+            currentMountainCase == nil
+        }
+    }
+
     func setCurrentStateOnContinueTap() {
         switch currentState {
         case .superpower:
@@ -32,7 +45,7 @@ final class QuestionViewModel {
         case .character:
             currentState = .mountain
         case .mountain:
-            return
+            isCompleted = true
         }
     }
 
