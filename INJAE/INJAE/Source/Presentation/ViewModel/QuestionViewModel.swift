@@ -38,6 +38,51 @@ final class QuestionViewModel {
         }
     }
 
+    var superpowerDescription: String {
+        switch currentSuperpowerCase {
+        case .teleportation:
+            "\nI'd like to handle tasks without being constrained by time or place."
+        case .invisibility:
+            "\nI'd appreciate the focus to quietly immerse myself in work."
+        case .future:
+            "\nI'd like the ability to make strategic decisions with foresight."
+        case .communication:
+            "\nI'd aim to communicate and collaborate smoothly with various people."
+        case nil:
+            ""
+        }
+    }
+
+    var characterDescription: String {
+        switch currentCharacterCase {
+        case .explorer:
+            "\nI want to work with people who seek innovation and fresh ideas."
+        case .meditator:
+            "\nI enjoy harmonizing different opinions and leading team unity."
+        case .strategist:
+            "\nI prefer solving problems with people who work methodically and strategically."
+        case .creator:
+            "\nI thrive in a creative environment where ideas can be freely shared."
+        case nil:
+            ""
+        }
+    }
+
+    var mountainDescription: String {
+        switch currentMountainCase {
+        case .smallGoals:
+            "\nI’d prefer to tackle each challenge one by one."
+        case .teamSupport:
+            "\nI’d like to rely on my team in tough situations."
+        case .variousMethod:
+            "\nI’d look for creative solutions to overcome obstacles."
+        case .analyze:
+            "\nI’d use an organized and swift approach to reach the summit."
+        case nil:
+            ""
+        }
+    }
+
     func setCurrentStateOnContinueTap() {
         switch currentState {
         case .superpower:

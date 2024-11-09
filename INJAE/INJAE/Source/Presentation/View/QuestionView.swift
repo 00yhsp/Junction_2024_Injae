@@ -83,18 +83,26 @@ private struct SuperpowerView: View {
             Button {
                 viewModel.setCurrentSuperpowerCase(sup)
             } label: {
-                Text(sup.rawValue)
-                    .font(.system(size: 14, weight: .bold))
-                    .foregroundStyle(viewModel.currentSuperpowerCase == sup ? Color.white : Color.black)
-                    .frame(maxWidth: .infinity)
-                    .padding(.vertical, 17)
-                    .background(viewModel.currentSuperpowerCase == sup ? Color(hex: "#A75835") : Color.white)
-                    .clipShape(RoundedRectangle(cornerRadius: 12))
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 12)
-                            .stroke(.black, lineWidth: 1)
-                            .opacity(viewModel.currentSuperpowerCase == sup ? 0 : 1)
-                    )
+                VStack(spacing: 0) {
+                    Text(sup.rawValue)
+                        .font(.system(size: 14, weight: .bold))
+                        .foregroundStyle(viewModel.currentSuperpowerCase == sup ? Color.white : Color.black)
+                    if sup == viewModel.currentSuperpowerCase {
+                        Text(viewModel.superpowerDescription)
+                            .font(.system(size: 14, weight: .semibold))
+                            .foregroundStyle( Color.white)
+                            .padding(.horizontal)
+                    }
+                }
+                .frame(maxWidth: .infinity)
+                .padding(.vertical, 17)
+                .background(viewModel.currentSuperpowerCase == sup ? Color(hex: "#A75835") : Color.white)
+                .clipShape(RoundedRectangle(cornerRadius: 12))
+                .overlay(
+                    RoundedRectangle(cornerRadius: 12)
+                        .stroke(.black, lineWidth: 1)
+                        .opacity(viewModel.currentSuperpowerCase == sup ? 0 : 1)
+                )
             }
             .padding(.horizontal, 16)
             .padding(.bottom, 24)
@@ -120,18 +128,26 @@ private struct CharacterView: View {
             Button {
                 viewModel.setCurrentCharacterCase(chr)
             } label: {
-                Text(chr.rawValue)
-                    .font(.system(size: 14, weight: .bold))
-                    .foregroundStyle(viewModel.currentCharacterCase == chr ? Color.white : Color.black)
-                    .frame(maxWidth: .infinity)
-                    .padding(.vertical, 17)
-                    .background(viewModel.currentCharacterCase == chr ? Color(hex: "#A75835") : Color.white)
-                    .clipShape(RoundedRectangle(cornerRadius: 12))
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 12)
-                            .stroke(.black, lineWidth: 1)
-                            .opacity(viewModel.currentCharacterCase == chr ? 0 : 1)
-                    )
+                VStack(spacing: 0) {
+                    Text(chr.rawValue)
+                        .font(.system(size: 14, weight: .bold))
+                        .foregroundStyle(viewModel.currentCharacterCase == chr ? Color.white : Color.black)
+                    if chr == viewModel.currentCharacterCase {
+                        Text(viewModel.characterDescription)
+                            .font(.system(size: 14, weight: .semibold))
+                            .foregroundStyle( Color.white)
+                            .padding(.horizontal)
+                    }
+                }
+                .frame(maxWidth: .infinity)
+                .padding(.vertical, 17)
+                .background(viewModel.currentCharacterCase == chr ? Color(hex: "#A75835") : Color.white)
+                .clipShape(RoundedRectangle(cornerRadius: 12))
+                .overlay(
+                    RoundedRectangle(cornerRadius: 12)
+                        .stroke(.black, lineWidth: 1)
+                        .opacity(viewModel.currentCharacterCase == chr ? 0 : 1)
+                )
             }
             .padding(.horizontal, 16)
             .padding(.bottom, 24)
@@ -158,18 +174,26 @@ private struct MountainView: View {
             Button {
                 viewModel.setCurrentMountainCase(mtn)
             } label: {
-                Text(mtn.rawValue)
-                    .font(.system(size: 14, weight: .bold))
-                    .foregroundStyle(viewModel.currentMountainCase == mtn ? Color.white : Color.black)
-                    .frame(maxWidth: .infinity)
-                    .padding(.vertical, 17)
-                    .background(viewModel.currentMountainCase == mtn ? Color(hex: "#A75835") : Color.white)
-                    .clipShape(RoundedRectangle(cornerRadius: 12))
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 12)
-                            .stroke(.black, lineWidth: 1)
-                            .opacity(viewModel.currentMountainCase == mtn ? 0 : 1)
-                    )
+                VStack(spacing: 0) {
+                    Text(mtn.rawValue)
+                        .font(.system(size: 14, weight: .bold))
+                        .foregroundStyle(viewModel.currentMountainCase == mtn ? Color.white : Color.black)
+                    if mtn == viewModel.currentMountainCase {
+                        Text(viewModel.mountainDescription)
+                            .font(.system(size: 14, weight: .semibold))
+                            .foregroundStyle( Color.white)
+                            .padding(.horizontal)
+                    }
+                }
+                .frame(maxWidth: .infinity)
+                .padding(.vertical, 17)
+                .background(viewModel.currentMountainCase == mtn ? Color(hex: "#A75835") : Color.white)
+                .clipShape(RoundedRectangle(cornerRadius: 12))
+                .overlay(
+                    RoundedRectangle(cornerRadius: 12)
+                        .stroke(.black, lineWidth: 1)
+                        .opacity(viewModel.currentMountainCase == mtn ? 0 : 1)
+                )
             }
             .padding(.horizontal, 16)
             .padding(.bottom, 24)
