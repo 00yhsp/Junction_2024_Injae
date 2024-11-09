@@ -26,7 +26,7 @@ struct QuestionView: View {
                 }
             }
             .navigationDestination(isPresented: $viewModel.isCompleted) {
-                BreadLoading()
+                MbtiView()
             }
         }
     }
