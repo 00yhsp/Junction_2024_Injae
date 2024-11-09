@@ -209,7 +209,7 @@ private struct BreadProgressView: View {
         VStack(spacing: 0) {
             HStack(spacing: 0) {
                 Spacer()
-                    .frame(width: UIScreen.main.bounds.width / 3 * progressValue)
+                    .frame(width: (UIScreen.main.bounds.width - 10) / 3 * progressValue)
 
                 Image(.bread)
                     .resizable()
@@ -218,7 +218,7 @@ private struct BreadProgressView: View {
             }
 
             Divider()
-                .frame(width: UIScreen.main.bounds.width / 3 * progressValue)
+                .frame(width: (UIScreen.main.bounds.width - 10) / 3 * progressValue)
                 .background(Color.black)
         }
     }
