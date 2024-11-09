@@ -11,7 +11,7 @@ import SwiftUI
 struct INJAEApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            QuestionView()
         }
     }
 }
