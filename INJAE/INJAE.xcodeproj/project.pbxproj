@@ -6,14 +6,27 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		DF4E59852CDFE287009799AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF4E59812CDFE287009799AE /* Assets.xcassets */; };
+		DF4E59862CDFE287009799AE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4E59822CDFE287009799AE /* ContentView.swift */; };
+		DF4E59872CDFE287009799AE /* INJAEApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4E59832CDFE287009799AE /* INJAEApp.swift */; };
+		DF4E59942CDFE456009799AE /* Color+.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4E59932CDFE456009799AE /* Color+.swift */; };
+		DF4E59962CDFE469009799AE /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4E59952CDFE469009799AE /* ContentViewModel.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		DF4E596E2CDF8B32009799AE /* INJAE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = INJAE.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF4E59812CDFE287009799AE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DF4E59822CDFE287009799AE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		DF4E59832CDFE287009799AE /* INJAEApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = INJAEApp.swift; sourceTree = "<group>"; };
+		DF4E59932CDFE456009799AE /* Color+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+.swift"; sourceTree = "<group>"; };
+		DF4E59952CDFE469009799AE /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		DF4E59702CDF8B32009799AE /* INJAE */ = {
+		DF4E598A2CDFE2BF009799AE /* Preview Content */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = INJAE;
+			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -32,7 +45,7 @@
 		DF4E59652CDF8B32009799AE = {
 			isa = PBXGroup;
 			children = (
-				DF4E59702CDF8B32009799AE /* INJAE */,
+				DF4E59882CDFE295009799AE /* INJAE */,
 				DF4E596F2CDF8B32009799AE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -43,6 +56,75 @@
 				DF4E596E2CDF8B32009799AE /* INJAE.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		DF4E59882CDFE295009799AE /* INJAE */ = {
+			isa = PBXGroup;
+			children = (
+				DF4E598D2CDFE3F1009799AE /* Source */,
+				DF4E598C2CDFE2D6009799AE /* Resource */,
+			);
+			path = INJAE;
+			sourceTree = "<group>";
+		};
+		DF4E598C2CDFE2D6009799AE /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				DF4E59812CDFE287009799AE /* Assets.xcassets */,
+				DF4E598A2CDFE2BF009799AE /* Preview Content */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		DF4E598D2CDFE3F1009799AE /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				DF4E598E2CDFE3FC009799AE /* App */,
+				DF4E598F2CDFE404009799AE /* Presentation */,
+				DF4E59922CDFE43C009799AE /* Extension */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		DF4E598E2CDFE3FC009799AE /* App */ = {
+			isa = PBXGroup;
+			children = (
+				DF4E59832CDFE287009799AE /* INJAEApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		DF4E598F2CDFE404009799AE /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				DF4E59902CDFE424009799AE /* View */,
+				DF4E59912CDFE42B009799AE /* ViewModel */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		DF4E59902CDFE424009799AE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DF4E59822CDFE287009799AE /* ContentView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DF4E59912CDFE42B009799AE /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				DF4E59952CDFE469009799AE /* ContentViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		DF4E59922CDFE43C009799AE /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				DF4E59932CDFE456009799AE /* Color+.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -61,7 +143,7 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				DF4E59702CDF8B32009799AE /* INJAE */,
+				DF4E598A2CDFE2BF009799AE /* Preview Content */,
 			);
 			name = INJAE;
 			packageProductDependencies = (
@@ -109,6 +191,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF4E59852CDFE287009799AE /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,6 +202,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF4E59962CDFE469009799AE /* ContentViewModel.swift in Sources */,
+				DF4E59862CDFE287009799AE /* ContentView.swift in Sources */,
+				DF4E59942CDFE456009799AE /* Color+.swift in Sources */,
+				DF4E59872CDFE287009799AE /* INJAEApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
