@@ -10,18 +10,23 @@ import SwiftUI
 struct QuestionView: View {
     @State var viewModel: QuestionViewModel = .init()
     var body: some View {
-        VStack(alignment: .leading, spacing: 0) {
-            TopBarLogo()
+        NavigationStack {
+            VStack(alignment: .leading, spacing: 0) {
+                TopBarLogo()
 
-            StatusBar(viewModel: viewModel)
+                StatusBar(viewModel: viewModel)
 
-            switch viewModel.currentState {
-            case .superpower:
-                SuperpowerView(viewModel: viewModel)
-            case .character:
-                CharacterView(viewModel: viewModel)
-            case .mountain:
-                MountainView(viewModel: viewModel)
+                switch viewModel.currentState {
+                case .superpower:
+                    SuperpowerView(viewModel: viewModel)
+                case .character:
+                    CharacterView(viewModel: viewModel)
+                case .mountain:
+                    MountainView(viewModel: viewModel)
+                }
+            }
+            .navigationDestination(isPresented: $viewModel.isCompleted) {
+                BreadLoading()
             }
         }
     }
@@ -181,8 +186,8 @@ private struct ContinueButton: View {
         }
         .padding(.horizontal, 16)
         .padding(.bottom, 25)
-        .disabled(viewModel.currentSuperpowerCase == nil)
-        .opacity(viewModel.currentSuperpowerCase == nil ? 0.3 : 1)
+        .disabled(viewModel.isContinueButtonDisabled)
+        .opacity(viewModel.isContinueButtonDisabled ? 0.3 : 1)
     }
 }
 
