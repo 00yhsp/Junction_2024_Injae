@@ -61,6 +61,7 @@
 		DF4E59882CDFE295009799AE /* INJAE */ = {
 			isa = PBXGroup;
 			children = (
+				DF4E598A2CDFE2BF009799AE /* Preview Content */,
 				DF4E598D2CDFE3F1009799AE /* Source */,
 				DF4E598C2CDFE2D6009799AE /* Resource */,
 			);
@@ -71,7 +72,6 @@
 			isa = PBXGroup;
 			children = (
 				DF4E59812CDFE287009799AE /* Assets.xcassets */,
-				DF4E598A2CDFE2BF009799AE /* Preview Content */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
