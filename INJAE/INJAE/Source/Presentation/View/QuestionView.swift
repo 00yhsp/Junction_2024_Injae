@@ -34,12 +34,23 @@ struct QuestionView: View {
 
 private struct TopBarLogo: View {
     var body: some View {
-        HStack {
-            Text("CINNAMON\nRoLe")
-                .font(.moveSans(weight: .medium, size: 28))
-                .lineSpacing(5.6)
-                .foregroundStyle(Color(hex: "#C5683F"))
-            Spacer()
+        VStack(spacing: 0) {
+            HStack {
+                Text("CINNAMON")
+                    .font(.moveSans(weight: .medium, size: 28))
+                    .lineSpacing(5.6)
+                    .foregroundStyle(Color(hex: "#C5683F"))
+                Spacer()
+            }
+
+            HStack {
+                Text("ROLe")
+                    .font(.moveSans(weight: .medium, size: 28))
+                    .lineSpacing(5.6)
+                    .foregroundStyle(Color(hex: "#C5683F"))
+                Image(.bread)
+                Spacer()
+            }
         }
         .padding(.horizontal, 16)
     }
@@ -61,12 +72,12 @@ private struct StatusBar: View {
 private struct SuperpowerView: View {
     let viewModel: QuestionViewModel
     var body: some View {
-            Text("What superpower would you like to have?")
-                .font(.system(size: 38, weight: .bold))
-                .multilineTextAlignment(.leading)
-                .padding(.horizontal, 16)
+        Text("What superpower would you like to have?")
+            .font(.system(size: 38, weight: .bold))
+            .multilineTextAlignment(.leading)
+            .padding(.horizontal, 16)
 
-            Spacer()
+        Spacer()
 
         ForEach(SuperpowerCase.allCases) { sup in
             Button {
@@ -98,12 +109,12 @@ private struct SuperpowerView: View {
 private struct CharacterView: View {
     let viewModel: QuestionViewModel
     var body: some View {
-            Text("What kind of character would you be?")
-                .font(.system(size: 36, weight: .bold))
-                .multilineTextAlignment(.leading)
-                .padding(.horizontal, 16)
+        Text("What kind of character would you be?")
+            .font(.system(size: 36, weight: .bold))
+            .multilineTextAlignment(.leading)
+            .padding(.horizontal, 16)
 
-            Spacer()
+        Spacer()
 
         ForEach(CharacterCase.allCases) { chr in
             Button {
@@ -198,7 +209,7 @@ private struct BreadProgressView: View {
         VStack(spacing: 0) {
             HStack(spacing: 0) {
                 Spacer()
-                    .frame(width: UIScreen.main.bounds.width / progressValue)
+                    .frame(width: UIScreen.main.bounds.width / 3 * progressValue)
 
                 Image(.bread)
                     .resizable()
@@ -207,7 +218,7 @@ private struct BreadProgressView: View {
             }
 
             Divider()
-                .frame(width: UIScreen.main.bounds.width / progressValue)
+                .frame(width: UIScreen.main.bounds.width / 3 * progressValue)
                 .background(Color.black)
         }
     }
