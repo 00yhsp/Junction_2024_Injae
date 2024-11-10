@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CC5558092CE0620100E21456 /* SelectedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5558082CE0620100E21456 /* SelectedView.swift */; };
+		CC55580B2CE0671100E21456 /* EvaluationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC55580A2CE0671100E21456 /* EvaluationView.swift */; };
+		CC8E94782CE06D6D00746CBC /* EvaluationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8E94772CE06D6D00746CBC /* EvaluationViewModel.swift */; };
+		CC8E947A2CE0721D00746CBC /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8E94792CE0721D00746CBC /* ResultView.swift */; };
 		CCD7121A2CE020BC00AD46B9 /* MbtiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD712192CE020BC00AD46B9 /* MbtiView.swift */; };
 		CCD712222CE02DB900AD46B9 /* FilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD712212CE02DB900AD46B9 /* FilterView.swift */; };
 		CCD712242CE030B800AD46B9 /* FilterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD712232CE030B800AD46B9 /* FilterViewModel.swift */; };
@@ -28,6 +32,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CC5558082CE0620100E21456 /* SelectedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedView.swift; sourceTree = "<group>"; };
+		CC55580A2CE0671100E21456 /* EvaluationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvaluationView.swift; sourceTree = "<group>"; };
+		CC8E94772CE06D6D00746CBC /* EvaluationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvaluationViewModel.swift; sourceTree = "<group>"; };
+		CC8E94792CE0721D00746CBC /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
 		CCD712192CE020BC00AD46B9 /* MbtiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MbtiView.swift; sourceTree = "<group>"; };
 		CCD712212CE02DB900AD46B9 /* FilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterView.swift; sourceTree = "<group>"; };
 		CCD712232CE030B800AD46B9 /* FilterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewModel.swift; sourceTree = "<group>"; };
@@ -142,6 +150,9 @@
 				CCD712252CE0486400AD46B9 /* FilterView2.swift */,
 				DF6F28752CE042A00055BF7C /* RecommendationView.swift */,
 				DF6F28792CE04FC00055BF7C /* ConnectingView.swift */,
+				CC5558082CE0620100E21456 /* SelectedView.swift */,
+				CC55580A2CE0671100E21456 /* EvaluationView.swift */,
+				CC8E94792CE0721D00746CBC /* ResultView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -153,6 +164,7 @@
 				CCD712232CE030B800AD46B9 /* FilterViewModel.swift */,
 				DF6F28772CE042B60055BF7C /* RecommendationViewModel.swift */,
 				DF6F28802CE057510055BF7C /* ConnectingViewModel.swift */,
+				CC8E94772CE06D6D00746CBC /* EvaluationViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -264,12 +276,16 @@
 			files = (
 				DF4E59A42CE00837009799AE /* QuestionViewModel.swift in Sources */,
 				CCD712242CE030B800AD46B9 /* FilterViewModel.swift in Sources */,
+				CC55580B2CE0671100E21456 /* EvaluationView.swift in Sources */,
+				CC5558092CE0620100E21456 /* SelectedView.swift in Sources */,
 				DF4E59A02CE005FA009799AE /* Font+.swift in Sources */,
 				DF4E59942CDFE456009799AE /* Color+.swift in Sources */,
 				DF6F28812CE057510055BF7C /* ConnectingViewModel.swift in Sources */,
 				DF6F287A2CE04FC00055BF7C /* ConnectingView.swift in Sources */,
 				DF4E59A22CE0077B009799AE /* QuestionView.swift in Sources */,
+				CC8E94782CE06D6D00746CBC /* EvaluationViewModel.swift in Sources */,
 				CCD712222CE02DB900AD46B9 /* FilterView.swift in Sources */,
+				CC8E947A2CE0721D00746CBC /* ResultView.swift in Sources */,
 				CCD7121A2CE020BC00AD46B9 /* MbtiView.swift in Sources */,
 				CCD712262CE0486400AD46B9 /* FilterView2.swift in Sources */,
 				DF4E59872CDFE287009799AE /* INJAEApp.swift in Sources */,

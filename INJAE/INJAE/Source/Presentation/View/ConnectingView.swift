@@ -32,12 +32,13 @@ struct ConnectingView: View {
                 NextButton(viewModel: viewModel)
             }
         }
+        .navigationBarBackButtonHidden()
         .background(Color(hex: "#A75835"))
         .onTapGesture {
             viewModel.isConnected = true
         }
-        .navigationDestination(isPresented: $viewModel.isLoading) {
-
+        .navigationDestination(isPresented: $viewModel.goToselected) {
+            SelectedView()
         }
     }
 }
@@ -162,7 +163,7 @@ private struct NextButton: View {
     let viewModel: ConnectingViewModel
     var body: some View {
         Button {
-
+            viewModel.goToselected = true
         } label: {
             Text("Write a review")
                 .font(.system(size: 14, weight: .bold))

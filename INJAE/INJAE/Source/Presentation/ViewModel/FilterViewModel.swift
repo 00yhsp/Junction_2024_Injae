@@ -37,7 +37,7 @@ final class FilterViewModel {
     var emoji = ["building", "person", "mappin", "network", "arrow.up.left.and.down.right.and.arrow.up.right.and.down.left", "person.line.dotted.person", "heart","figure.run.treadmill", "chart.line.uptrend.xyaxis"]
 
     func addToSelectedList(_ item: String) {
-         if !selectedList.contains(item) {
+        if !selectedList.contains(item) {
              selectedList.append(item)
          }
      }

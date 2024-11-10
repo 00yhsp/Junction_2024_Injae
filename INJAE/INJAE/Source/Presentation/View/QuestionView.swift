@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct QuestionView: View {
+    @State var filterVM: FilterViewModel = .init()
     @State var viewModel: QuestionViewModel = .init()
     var body: some View {
         NavigationStack {
@@ -34,6 +35,7 @@ struct QuestionView: View {
                 viewModel.isViewAppeared = true
             }
         }
+        .environment(filterVM)
     }
 }
 

@@ -8,9 +8,10 @@
 import SwiftUI
 
 struct FilterView: View {
-    @State private var viewModel = FilterViewModel()
+    @Environment(FilterViewModel.self) private var viewModel
     
     var body: some View {
+        @Bindable var viewModel = viewModel
         VStack {
             TopBarLogo()
             
@@ -32,7 +33,6 @@ struct FilterView: View {
             
             NavigationLink {
                 FilterView2()
-                    .environment(viewModel)
             } label: {
                 RoundedRectangle(cornerRadius: 12)
                     .fill(Color(hex: "C5683F"))

@@ -27,6 +27,10 @@ struct RecommendationView: View {
             SendButton(viewModel: viewModel)
         }
         .background(Color(hex: "#A75835"))
+        .navigationBarBackButtonHidden()
+        .navigationDestination(isPresented: $viewModel.goToConnected) {
+            ConnectingView()
+        }
     }
 }
 
