@@ -97,7 +97,7 @@ private struct SendButton: View {
         Button {
             viewModel.goToConnected = true
         } label: {
-            Text(viewModel.selectedIdx == nil ? "Send my Cinnamon Role" : "Send")
+            Text("Send my Cinnamon Role")
                 .foregroundStyle(.white)
                 .font(.system(size: 14, weight: .bold))
                 .padding(.vertical, 17)
