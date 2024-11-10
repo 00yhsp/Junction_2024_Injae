@@ -15,7 +15,7 @@ struct SelectedView: View {
             TopBarLogo()
             
             HStack {
-                Text("What is important to you?")
+                Text("This was what you have valued")
                     .font(Font.system(size: 26, weight: .bold))
                     
                 Spacer()

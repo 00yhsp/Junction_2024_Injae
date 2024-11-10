@@ -9,7 +9,7 @@ struct ResultView: View {
             
             ScrollView {
                 HStack {
-                    Text("How different is it for you?")
+                    Text("Review about Aava")
                         .font(Font.system(size: 26, weight: .bold))
                     Spacer()
                 }

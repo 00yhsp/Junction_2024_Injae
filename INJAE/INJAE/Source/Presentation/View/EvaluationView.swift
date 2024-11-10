@@ -15,7 +15,7 @@ struct EvaluationView: View {
             TopBarLogo()
             
             HStack {
-                Text("How different is it for you?")
+                Text("How was Aava?")
                     .font(Font.system(size: 26, weight: .bold))
                 Spacer()
             }
