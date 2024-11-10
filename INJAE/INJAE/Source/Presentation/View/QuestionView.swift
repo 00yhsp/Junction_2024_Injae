@@ -23,10 +23,15 @@ struct QuestionView: View {
                     CharacterView(viewModel: viewModel)
                 case .mountain:
                     MountainView(viewModel: viewModel)
+                case .energy:
+                    EnergyView(viewModel: viewModel)
                 }
             }
             .navigationDestination(isPresented: $viewModel.isCompleted) {
                 MbtiView()
+            }
+            .onAppear {
+                viewModel.isViewAppeared = true
             }
         }
     }
@@ -73,7 +78,7 @@ private struct SuperpowerView: View {
     let viewModel: QuestionViewModel
     var body: some View {
         Text("What superpower would you like to have?")
-            .font(.system(size: 38, weight: .bold))
+            .font(.system(size: 24, weight: .bold))
             .multilineTextAlignment(.leading)
             .padding(.horizontal, 16)
 
@@ -118,7 +123,7 @@ private struct CharacterView: View {
     let viewModel: QuestionViewModel
     var body: some View {
         Text("What kind of character would you be?")
-            .font(.system(size: 36, weight: .bold))
+            .font(.system(size: 28, weight: .bold))
             .multilineTextAlignment(.leading)
             .padding(.horizontal, 16)
 
@@ -164,7 +169,7 @@ private struct MountainView: View {
     var body: some View {
 
         Text("If you were climbing a very tall mountain, what strategies would you use along the way to get to the top?")
-            .font(.system(size: 32, weight: .bold))
+            .font(.system(size: 28, weight: .bold))
             .multilineTextAlignment(.leading)
             .padding(.horizontal, 16)
 
@@ -205,6 +210,46 @@ private struct MountainView: View {
     }
 }
 
+private struct EnergyView: View {
+    let viewModel: QuestionViewModel
+    let columns: [GridItem] = [.init(.flexible()), .init(.flexible())]
+
+    var body: some View {
+        Text("Where do you find energy?\nPick all that feel right.")
+            .font(.system(size: 28, weight: .bold))
+            .multilineTextAlignment(.leading)
+            .padding(.horizontal, 16)
+
+        Spacer()
+
+        LazyVGrid(columns: columns, spacing: 16) {
+            ForEach(EnergyCase.allCases) { egy in
+                Button {
+                    viewModel.setEnergyCase(egy)
+                } label: {
+                    Text(egy.rawValue)
+                        .font(.system(size: 14, weight: .bold))
+                        .foregroundStyle(viewModel.currentEnergyCases.contains(egy) ? Color.white : Color.black)
+                        .frame(maxWidth: .infinity)
+                        .padding(.vertical, 17)
+                        .background(viewModel.currentEnergyCases.contains(egy) ? Color(hex: "#A75835") : Color.white)
+                        .clipShape(RoundedRectangle(cornerRadius: 12))
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 12)
+                                .stroke(.black, lineWidth: 1)
+                                .opacity(viewModel.currentEnergyCases.contains(egy) ? 0 : 1)
+                        )
+                }
+            }
+        }
+        .padding(.horizontal, 16)
+
+        Spacer()
+
+        ContinueButton(viewModel: viewModel)
+    }
+}
+
 private struct ContinueButton: View {
     let viewModel: QuestionViewModel
     var body: some View {
@@ -233,16 +278,16 @@ private struct BreadProgressView: View {
         VStack(spacing: 0) {
             HStack(spacing: 0) {
                 Spacer()
-                    .frame(width: (UIScreen.main.bounds.width - 10) / 3 * progressValue)
+                    .frame(width: (UIScreen.main.bounds.width - 10) / 4 * progressValue)
 
                 Image(.bread)
                     .resizable()
                     .frame(width: 27, height: 27)
-                    .rotationEffect(.degrees((3 - progressValue) * CGFloat(360)))
+                    .rotationEffect(.degrees((4 - progressValue) * CGFloat(360)))
             }
 
             Divider()
-                .frame(width: (UIScreen.main.bounds.width - 10) / 3 * progressValue)
+                .frame(width: (UIScreen.main.bounds.width - 10) / 4 * progressValue)
                 .background(Color.black)
         }
     }
