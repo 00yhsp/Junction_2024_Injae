@@ -8,9 +8,10 @@
 import SwiftUI
 
 struct FilterView2: View {
-    @State private var viewModel = FilterViewModel()
-    
+    @Environment(FilterViewModel.self) private var viewModel
+
     var body: some View {
+        @Bindable var viewModel = viewModel
         VStack {
             TopBarLogo()
             
@@ -42,6 +43,8 @@ struct FilterView2: View {
                     .frame(width: 361, height: 48)
             }
             .padding(.bottom, 24)
+            .disabled(viewModel.selectedList.count < 4)
+            .opacity(viewModel.selectedList.count < 4 ? 0.3 : 1)
         }
         .navigationBarBackButtonHidden()
     }

@@ -21,4 +21,5 @@ final class ConnectingViewModel {
     }
     var isShowingBuddy: Bool = false
     var isLoading: Bool = true
+    var goToselected: Bool = false
 }
