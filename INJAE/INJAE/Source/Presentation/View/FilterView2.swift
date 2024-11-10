@@ -1,5 +1,5 @@
 //
-//  FilterView.swift
+//  FilterView2.swift
 //  INJAE
 //
 //  Created by LeeWanJae on 11/10/24.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct FilterView: View {
+struct FilterView2: View {
     @State private var viewModel = FilterViewModel()
     
     var body: some View {
@@ -15,21 +15,20 @@ struct FilterView: View {
             TopBarLogo()
             
             HStack {
-                Text("Choose your preference")
+                Text("What is important to you?")
                     .font(Font.system(size: 26, weight: .bold))
                 Spacer()
             }
             .padding(.vertical, 34)
             .padding(.horizontal, 16)
             
-            SelectedView(emoji: viewModel.emoji[0], title: "Industry Sector", menuItems: viewModel.industries, selectedItem: $viewModel.selectedIndustry)
-            SelectedView(emoji: viewModel.emoji[1], title: "Job Function/Role", menuItems: viewModel.jobs, selectedItem: $viewModel.selectedJob)
-            SelectedView(emoji: viewModel.emoji[2], title: "Location Preference", menuItems: viewModel.locations, selectedItem: $viewModel.selectedLocation)
-            SelectedView(emoji: viewModel.emoji[3], title: "Working Arrangement", menuItems: viewModel.working, selectedItem: $viewModel.selectedWorking)
-            SelectedView(emoji: viewModel.emoji[4], title: "Company Size", menuItems: viewModel.companysize, selectedItem: $viewModel.selectedCompanySize)
+            SelectedView(emoji: viewModel.emoji[5], title: "Company Culture", menuItems: viewModel.companyCultures, selectedItem: $viewModel.selectedCompanyCulture)
+            SelectedView(emoji: viewModel.emoji[6], title: "Benefit", menuItems: viewModel.benefits, selectedItem: $viewModel.selectedBenefits)
+            SelectedView(emoji: viewModel.emoji[7], title: "Welfare Program", menuItems: viewModel.welfare, selectedItem: $viewModel.selectedLocation)
+            SelectedView(emoji: viewModel.emoji[8], title: "Career Growth Opportunity", menuItems: viewModel.career, selectedItem: $viewModel.selectedCareer)
             
             NavigationLink {
-                FilterView2()
+                BreadLoading()
             } label: {
                 RoundedRectangle(cornerRadius: 12)
                     .fill(Color(hex: "C5683F"))
@@ -46,7 +45,7 @@ struct FilterView: View {
     }
 }
 
-extension FilterView {
+extension FilterView2 {
     private struct TopBarLogo: View {
         var body: some View {
             VStack(spacing: 0) {
@@ -115,7 +114,6 @@ extension FilterView {
                             }
                         }
                     }
-                    
                     Divider()
                 }
                 .padding(.bottom, 20)
