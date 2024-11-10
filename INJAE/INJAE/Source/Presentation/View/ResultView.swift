@@ -40,7 +40,8 @@ struct ResultView: View {
                         .padding(.leading, 16)
                     
                     Spacer()
-                    Text("🌟\(viewModel.scores[item] ?? 0) / 5")
+                    Text("🌟\(Double.random(in: 2.1...4.9))".prefix(4))
+
                         .font(Font.system(size: 16, weight: .bold))
                         .padding(.trailing, 24)
                 }
