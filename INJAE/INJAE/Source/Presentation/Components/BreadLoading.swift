@@ -23,6 +23,7 @@ struct BreadLoading: View {
             Text("AI analyzing...")
                 .font(.system(size: 28, weight: .medium))
         }
+        .navigationBarBackButtonHidden()
     }
 }
 
