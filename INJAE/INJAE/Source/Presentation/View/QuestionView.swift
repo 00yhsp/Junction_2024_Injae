@@ -54,6 +54,9 @@ private struct TopBarLogo: View {
                     .lineSpacing(5.6)
                     .foregroundStyle(Color(hex: "#C5683F"))
                 Image(.bread)
+                    .resizable()
+                    .scaledToFit()
+                    .frame(height: 20)
                 Spacer()
             }
         }
