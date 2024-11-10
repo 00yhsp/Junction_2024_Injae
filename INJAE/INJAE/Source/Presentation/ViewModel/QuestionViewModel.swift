@@ -13,15 +13,24 @@ final class QuestionViewModel {
     var currentSuperpowerCase: SuperpowerCase?
     var currentCharacterCase: CharacterCase?
     var currentMountainCase: MountainCase?
+    var currentEnergyCases: [EnergyCase] = []
+
+    var isViewAppeared: Bool = false
 
     var progressValue: CGFloat {
-        switch currentState {
-        case .superpower:
-            return 1
-        case .character:
-            return 2
-        case .mountain:
-            return 3
+        if isViewAppeared {
+            switch currentState {
+            case .superpower:
+                return 1
+            case .character:
+                return 2
+            case .mountain:
+                return 3
+            case .energy:
+                return 4
+            }
+        } else {
+            return 0
         }
     }
 
@@ -35,6 +44,8 @@ final class QuestionViewModel {
             currentCharacterCase == nil
         case .mountain:
             currentMountainCase == nil
+        case .energy:
+            currentEnergyCases.isEmpty
         }
     }
 
@@ -90,6 +101,8 @@ final class QuestionViewModel {
         case .character:
             currentState = .mountain
         case .mountain:
+            currentState = .energy
+        case .energy:
             isCompleted = true
         }
     }
@@ -117,12 +130,23 @@ final class QuestionViewModel {
             currentMountainCase = mountainCase
         }
     }
+
+    func setEnergyCase(_ energyCase: EnergyCase) {
+        if currentEnergyCases.contains(energyCase) {
+            if let index = currentEnergyCases.firstIndex(of: energyCase) {
+                currentEnergyCases.remove(at: index)
+            }
+        } else {
+            currentEnergyCases.append(energyCase)
+        }
+    }
 }
 
 enum CurrentState {
     case superpower
     case character
     case mountain
+    case energy
 }
 
 enum SuperpowerCase: String, Identifiable, CaseIterable {
@@ -156,4 +180,21 @@ enum MountainCase: String, Identifiable, CaseIterable {
     case teamSupport = "Work with a team to support each other"
     case variousMethod = "Find new paths by trying different methods"
     case analyze = "Quickly analyze problems and execute solutions"
+}
+
+enum EnergyCase: String, Identifiable, CaseIterable {
+    var id: String {
+        return self.rawValue
+    }
+
+    case first = "A buzzing hive"
+    case second = "Mountain Peaks"
+    case third = "Clear Paths"
+    case fourth = "Swift Currents"
+    case fifth = "Creative Mess"
+    case sixth = "Campfire warmth"
+    case seventh = "Solo Trails"
+    case eighth = "Mountain peaks"
+    case ninth = "Shared horizons"
+    case tenth = "Wandering winds"
 }
