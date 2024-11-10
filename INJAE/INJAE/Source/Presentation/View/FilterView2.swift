@@ -27,6 +27,8 @@ struct FilterView2: View {
             SelectedView(emoji: viewModel.emoji[7], title: "Welfare Program", menuItems: viewModel.welfare, selectedItem: $viewModel.selectedLocation)
             SelectedView(emoji: viewModel.emoji[8], title: "Career Growth Opportunity", menuItems: viewModel.career, selectedItem: $viewModel.selectedCareer)
             
+            Spacer()
+            
             NavigationLink {
                 BreadLoading()
             } label: {
@@ -48,23 +50,22 @@ struct FilterView2: View {
 extension FilterView2 {
     private struct TopBarLogo: View {
         var body: some View {
-            VStack(spacing: 0) {
-                HStack {
-                    Text("CINNAMON")
-                        .font(.moveSans(weight: .medium, size: 28))
-                        .lineSpacing(5.6)
-                        .foregroundStyle(Color(hex: "#C5683F"))
-                    Spacer()
-                }
+            HStack {
+                Text("CINNAMON")
+                    .font(.moveSans(weight: .medium, size: 28))
+                    .lineSpacing(5.6)
+                    .foregroundStyle(Color(hex: "#C5683F"))
                 
-                HStack {
-                    Text("ROLe")
-                        .font(.moveSans(weight: .medium, size: 28))
-                        .lineSpacing(5.6)
-                        .foregroundStyle(Color(hex: "#C5683F"))
-                    Image(.bread)
-                    Spacer()
-                }
+                Text("ROLe")
+                    .font(.moveSans(weight: .medium, size: 28))
+                    .lineSpacing(5.6)
+                    .foregroundStyle(Color(hex: "#C5683F"))
+                
+                Image(.bread)
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 20, height: 20)
+                Spacer()
             }
             .padding(.horizontal, 16)
         }
@@ -98,6 +99,7 @@ extension FilterView2 {
                             ForEach(menuItems, id: \.self) { item in
                                 Button {
                                     selectedItem.wrappedValue = item
+                                    viewModel.addToSelectedList(item)
                                     viewModel.selected.toggle()
                                 } label: {
                                     Text(item)
