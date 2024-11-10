@@ -29,6 +29,7 @@
 		DF6F28782CE042B60055BF7C /* RecommendationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6F28772CE042B60055BF7C /* RecommendationViewModel.swift */; };
 		DF6F287A2CE04FC00055BF7C /* ConnectingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6F28792CE04FC00055BF7C /* ConnectingView.swift */; };
 		DF6F28812CE057510055BF7C /* ConnectingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6F28802CE057510055BF7C /* ConnectingViewModel.swift */; };
+		DF6F288D2CE086DE0055BF7C /* UINavigationController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6F288C2CE086DE0055BF7C /* UINavigationController+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		DF6F28772CE042B60055BF7C /* RecommendationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendationViewModel.swift; sourceTree = "<group>"; };
 		DF6F28792CE04FC00055BF7C /* ConnectingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectingView.swift; sourceTree = "<group>"; };
 		DF6F28802CE057510055BF7C /* ConnectingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectingViewModel.swift; sourceTree = "<group>"; };
+		DF6F288C2CE086DE0055BF7C /* UINavigationController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -172,6 +174,7 @@
 		DF4E59922CDFE43C009799AE /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				DF6F288C2CE086DE0055BF7C /* UINavigationController+.swift */,
 				DF4E59932CDFE456009799AE /* Color+.swift */,
 				DF4E599F2CE005FA009799AE /* Font+.swift */,
 			);
@@ -291,6 +294,7 @@
 				DF4E59872CDFE287009799AE /* INJAEApp.swift in Sources */,
 				DF6F28782CE042B60055BF7C /* RecommendationViewModel.swift in Sources */,
 				DF4E59A72CE01AB0009799AE /* BreadLoading.swift in Sources */,
+				DF6F288D2CE086DE0055BF7C /* UINavigationController+.swift in Sources */,
 				DF6F28762CE042A00055BF7C /* RecommendationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
