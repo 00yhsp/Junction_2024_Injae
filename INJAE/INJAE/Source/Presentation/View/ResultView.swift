@@ -9,7 +9,7 @@ struct ResultView: View {
             
             ScrollView {
                 HStack {
-                    Text("How different is it for you?")
+                    Text("Review about Aava")
                         .font(Font.system(size: 26, weight: .bold))
                     Spacer()
                 }
@@ -41,7 +41,6 @@ struct ResultView: View {
                     
                     Spacer()
                     Text("🌟\(Double.random(in: 2.1...4.9))".prefix(4))
-
                         .font(Font.system(size: 16, weight: .bold))
                         .padding(.trailing, 24)
                 }
