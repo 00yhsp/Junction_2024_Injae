@@ -156,8 +156,8 @@ enum SuperpowerCase: String, Identifiable, CaseIterable {
 
     case teleportation = "Teleportation"
     case invisibility = "Invisibility"
-    case future = "Anticipate the future"
-    case communication = "Strong communication skills"
+    case future = "Future Prediction"
+    case communication = "Mind Reading"
 }
 
 enum CharacterCase: String, Identifiable, CaseIterable {
@@ -165,10 +165,10 @@ enum CharacterCase: String, Identifiable, CaseIterable {
         return self.rawValue
     }
 
-    case explorer = "Challenged explorer"
-    case meditator = "A harmonious mediator"
-    case strategist = "Thorough strategist"
-    case creator = "Flexible creator"
+    case explorer = "Adventurous Explorer"
+    case meditator = "Harmonious Mediator"
+    case strategist = "Thorough Strategist"
+    case creator = "Flexible Creator"
 }
 
 enum MountainCase: String, Identifiable, CaseIterable {
