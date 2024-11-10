@@ -25,7 +25,7 @@ struct FilterView2: View {
             
             SelectedView(emoji: viewModel.emoji[5], title: "Company Culture", menuItems: viewModel.companyCultures, selectedItem: $viewModel.selectedCompanyCulture)
             SelectedView(emoji: viewModel.emoji[6], title: "Benefit", menuItems: viewModel.benefits, selectedItem: $viewModel.selectedBenefits)
-            SelectedView(emoji: viewModel.emoji[7], title: "Welfare Program", menuItems: viewModel.welfare, selectedItem: $viewModel.selectedLocation)
+            SelectedView(emoji: viewModel.emoji[7], title: "Welfare Program", menuItems: viewModel.welfare, selectedItem: $viewModel.selectedWelfare)
             SelectedView(emoji: viewModel.emoji[8], title: "Career Growth Opportunity", menuItems: viewModel.career, selectedItem: $viewModel.selectedCareer)
             
             Spacer()
