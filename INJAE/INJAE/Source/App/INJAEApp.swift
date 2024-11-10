@@ -11,7 +11,6 @@ import SwiftUI
 struct INJAEApp: App {
     var body: some Scene {
         WindowGroup {
-//            BreadLoading()
             QuestionView()
         }
     }
