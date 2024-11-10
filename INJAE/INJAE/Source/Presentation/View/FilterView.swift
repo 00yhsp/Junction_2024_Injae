@@ -28,8 +28,11 @@ struct FilterView: View {
             SelectedView(emoji: viewModel.emoji[3], title: "Working Arrangement", menuItems: viewModel.working, selectedItem: $viewModel.selectedWorking)
             SelectedView(emoji: viewModel.emoji[4], title: "Company Size", menuItems: viewModel.companysize, selectedItem: $viewModel.selectedCompanySize)
             
+            Spacer()
+            
             NavigationLink {
                 FilterView2()
+                    .environment(viewModel)
             } label: {
                 RoundedRectangle(cornerRadius: 12)
                     .fill(Color(hex: "C5683F"))
@@ -49,23 +52,22 @@ struct FilterView: View {
 extension FilterView {
     private struct TopBarLogo: View {
         var body: some View {
-            VStack(spacing: 0) {
-                HStack {
-                    Text("CINNAMON")
-                        .font(.moveSans(weight: .medium, size: 28))
-                        .lineSpacing(5.6)
-                        .foregroundStyle(Color(hex: "#C5683F"))
-                    Spacer()
-                }
+            HStack {
+                Text("CINNAMON")
+                    .font(.moveSans(weight: .medium, size: 28))
+                    .lineSpacing(5.6)
+                    .foregroundStyle(Color(hex: "#C5683F"))
                 
-                HStack {
-                    Text("ROLe")
-                        .font(.moveSans(weight: .medium, size: 28))
-                        .lineSpacing(5.6)
-                        .foregroundStyle(Color(hex: "#C5683F"))
-                    Image(.bread)
-                    Spacer()
-                }
+                Text("ROLe")
+                    .font(.moveSans(weight: .medium, size: 28))
+                    .lineSpacing(5.6)
+                    .foregroundStyle(Color(hex: "#C5683F"))
+                
+                Image(.bread)
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 20, height: 20)
+                Spacer()
             }
             .padding(.horizontal, 16)
         }

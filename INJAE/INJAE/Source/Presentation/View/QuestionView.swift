@@ -13,9 +13,9 @@ struct QuestionView: View {
         NavigationStack {
             VStack(alignment: .leading, spacing: 0) {
                 TopBarLogo()
-
+                
                 StatusBar(viewModel: viewModel)
-
+                
                 switch viewModel.currentState {
                 case .superpower:
                     SuperpowerView(viewModel: viewModel)
@@ -39,23 +39,22 @@ struct QuestionView: View {
 
 private struct TopBarLogo: View {
     var body: some View {
-        VStack(spacing: 0) {
-            HStack {
-                Text("CINNAMON")
-                    .font(.moveSans(weight: .medium, size: 28))
-                    .lineSpacing(5.6)
-                    .foregroundStyle(Color(hex: "#C5683F"))
-                Spacer()
-            }
-
-            HStack {
-                Text("ROLe")
-                    .font(.moveSans(weight: .medium, size: 28))
-                    .lineSpacing(5.6)
-                    .foregroundStyle(Color(hex: "#C5683F"))
-                Image(.bread)
-                Spacer()
-            }
+        HStack {
+            Text("CINNAMON")
+                .font(.moveSans(weight: .medium, size: 28))
+                .lineSpacing(5.6)
+                .foregroundStyle(Color(hex: "#C5683F"))
+            
+            Text("ROLe")
+                .font(.moveSans(weight: .medium, size: 28))
+                .lineSpacing(5.6)
+                .foregroundStyle(Color(hex: "#C5683F"))
+            
+            Image(.bread)
+                .resizable()
+                .scaledToFit()
+                .frame(width: 20, height: 20)
+            Spacer()
         }
         .padding(.horizontal, 16)
     }
@@ -81,9 +80,9 @@ private struct SuperpowerView: View {
             .font(.system(size: 24, weight: .bold))
             .multilineTextAlignment(.leading)
             .padding(.horizontal, 16)
-
+        
         Spacer()
-
+        
         ForEach(SuperpowerCase.allCases) { sup in
             Button {
                 viewModel.setCurrentSuperpowerCase(sup)
@@ -112,9 +111,9 @@ private struct SuperpowerView: View {
             .padding(.horizontal, 16)
             .padding(.bottom, 24)
         }
-
+        
         Spacer()
-
+        
         ContinueButton(viewModel: viewModel)
     }
 }
@@ -126,9 +125,9 @@ private struct CharacterView: View {
             .font(.system(size: 28, weight: .bold))
             .multilineTextAlignment(.leading)
             .padding(.horizontal, 16)
-
+        
         Spacer()
-
+        
         ForEach(CharacterCase.allCases) { chr in
             Button {
                 viewModel.setCurrentCharacterCase(chr)
@@ -157,9 +156,9 @@ private struct CharacterView: View {
             .padding(.horizontal, 16)
             .padding(.bottom, 24)
         }
-
+        
         Spacer()
-
+        
         ContinueButton(viewModel: viewModel)
     }
 }
@@ -167,14 +166,14 @@ private struct CharacterView: View {
 private struct MountainView: View {
     let viewModel: QuestionViewModel
     var body: some View {
-
+        
         Text("If you were climbing a very tall mountain, what strategies would you use along the way to get to the top?")
             .font(.system(size: 28, weight: .bold))
             .multilineTextAlignment(.leading)
             .padding(.horizontal, 16)
-
+        
         Spacer()
-
+        
         ForEach(MountainCase.allCases) { mtn in
             Button {
                 viewModel.setCurrentMountainCase(mtn)
@@ -203,9 +202,9 @@ private struct MountainView: View {
             .padding(.horizontal, 16)
             .padding(.bottom, 24)
         }
-
+        
         Spacer()
-
+        
         ContinueButton(viewModel: viewModel)
     }
 }
@@ -213,15 +212,15 @@ private struct MountainView: View {
 private struct EnergyView: View {
     let viewModel: QuestionViewModel
     let columns: [GridItem] = [.init(.flexible()), .init(.flexible())]
-
+    
     var body: some View {
         Text("Where do you find energy?\nPick all that feel right.")
             .font(.system(size: 28, weight: .bold))
             .multilineTextAlignment(.leading)
             .padding(.horizontal, 16)
-
+        
         Spacer()
-
+        
         LazyVGrid(columns: columns, spacing: 16) {
             ForEach(EnergyCase.allCases) { egy in
                 Button {
@@ -243,9 +242,9 @@ private struct EnergyView: View {
             }
         }
         .padding(.horizontal, 16)
-
+        
         Spacer()
-
+        
         ContinueButton(viewModel: viewModel)
     }
 }
@@ -273,19 +272,19 @@ private struct ContinueButton: View {
 
 private struct BreadProgressView: View {
     var progressValue: CGFloat
-
+    
     var body: some View {
         VStack(spacing: 0) {
             HStack(spacing: 0) {
                 Spacer()
                     .frame(width: (UIScreen.main.bounds.width - 10) / 4 * progressValue)
-
+                
                 Image(.bread)
                     .resizable()
                     .frame(width: 27, height: 27)
                     .rotationEffect(.degrees((4 - progressValue) * CGFloat(360)))
             }
-
+            
             Divider()
                 .frame(width: (UIScreen.main.bounds.width - 10) / 4 * progressValue)
                 .background(Color.black)

@@ -21,6 +21,10 @@
 		DF4E59A22CE0077B009799AE /* QuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4E59A12CE0077B009799AE /* QuestionView.swift */; };
 		DF4E59A42CE00837009799AE /* QuestionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4E59A32CE00837009799AE /* QuestionViewModel.swift */; };
 		DF4E59A72CE01AB0009799AE /* BreadLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4E59A62CE01AB0009799AE /* BreadLoading.swift */; };
+		DF6F28762CE042A00055BF7C /* RecommendationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6F28752CE042A00055BF7C /* RecommendationView.swift */; };
+		DF6F28782CE042B60055BF7C /* RecommendationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6F28772CE042B60055BF7C /* RecommendationViewModel.swift */; };
+		DF6F287A2CE04FC00055BF7C /* ConnectingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6F28792CE04FC00055BF7C /* ConnectingView.swift */; };
+		DF6F28812CE057510055BF7C /* ConnectingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6F28802CE057510055BF7C /* ConnectingViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +44,10 @@
 		DF4E59A12CE0077B009799AE /* QuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionView.swift; sourceTree = "<group>"; };
 		DF4E59A32CE00837009799AE /* QuestionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewModel.swift; sourceTree = "<group>"; };
 		DF4E59A62CE01AB0009799AE /* BreadLoading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreadLoading.swift; sourceTree = "<group>"; };
+		DF6F28752CE042A00055BF7C /* RecommendationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendationView.swift; sourceTree = "<group>"; };
+		DF6F28772CE042B60055BF7C /* RecommendationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendationViewModel.swift; sourceTree = "<group>"; };
+		DF6F28792CE04FC00055BF7C /* ConnectingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectingView.swift; sourceTree = "<group>"; };
+		DF6F28802CE057510055BF7C /* ConnectingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectingViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -132,6 +140,8 @@
 				CCD712192CE020BC00AD46B9 /* MbtiView.swift */,
 				CCD712212CE02DB900AD46B9 /* FilterView.swift */,
 				CCD712252CE0486400AD46B9 /* FilterView2.swift */,
+				DF6F28752CE042A00055BF7C /* RecommendationView.swift */,
+				DF6F28792CE04FC00055BF7C /* ConnectingView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -141,6 +151,8 @@
 			children = (
 				DF4E59A32CE00837009799AE /* QuestionViewModel.swift */,
 				CCD712232CE030B800AD46B9 /* FilterViewModel.swift */,
+				DF6F28772CE042B60055BF7C /* RecommendationViewModel.swift */,
+				DF6F28802CE057510055BF7C /* ConnectingViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -254,12 +266,16 @@
 				CCD712242CE030B800AD46B9 /* FilterViewModel.swift in Sources */,
 				DF4E59A02CE005FA009799AE /* Font+.swift in Sources */,
 				DF4E59942CDFE456009799AE /* Color+.swift in Sources */,
+				DF6F28812CE057510055BF7C /* ConnectingViewModel.swift in Sources */,
+				DF6F287A2CE04FC00055BF7C /* ConnectingView.swift in Sources */,
 				DF4E59A22CE0077B009799AE /* QuestionView.swift in Sources */,
 				CCD712222CE02DB900AD46B9 /* FilterView.swift in Sources */,
 				CCD7121A2CE020BC00AD46B9 /* MbtiView.swift in Sources */,
 				CCD712262CE0486400AD46B9 /* FilterView2.swift in Sources */,
 				DF4E59872CDFE287009799AE /* INJAEApp.swift in Sources */,
+				DF6F28782CE042B60055BF7C /* RecommendationViewModel.swift in Sources */,
 				DF4E59A72CE01AB0009799AE /* BreadLoading.swift in Sources */,
+				DF6F28762CE042A00055BF7C /* RecommendationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

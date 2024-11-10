@@ -9,6 +9,7 @@ import SwiftUI
 
 struct BreadLoading: View {
     @State private var isAnimating = false
+    @State private var goToRecommendation: Bool = false
 
     var body: some View {
         VStack(spacing: 0) {
@@ -23,7 +24,13 @@ struct BreadLoading: View {
             Text("AI analyzing...")
                 .font(.system(size: 28, weight: .medium))
         }
+        .onTapGesture {
+            goToRecommendation = true
+        }
         .navigationBarBackButtonHidden()
+        .navigationDestination(isPresented: $goToRecommendation) {
+            RecommendationView()
+        }
     }
 }
 
