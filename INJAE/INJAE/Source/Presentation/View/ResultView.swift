@@ -41,6 +41,7 @@ struct ResultView: View {
                     
                     Spacer()
                     Text("🌟\(Double.random(in: 2.1...4.9))".prefix(4))
+
                         .font(Font.system(size: 16, weight: .bold))
                         .padding(.trailing, 24)
                 }
